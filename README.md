@@ -1,14 +1,15 @@
 Whiteaway-2021
 ==============================
 
-Whiteaway case opgave Juni 2021.
+Whiteaway case opgave Juni-Juli 2021.
 
 
 
 
 
 
-### Environment
+Environment
+-----------
 
 Conda environment:
 
@@ -23,11 +24,31 @@ Alternatively, from conda-forge
 ```cmd
 conda create -n whiteaway-cf -c conda-forge python numpy pandas notebook seaborn holoviews bokeh hvplot panel param networkx requests sphinx coverage flake8 python-dotenv
 conda activate data-whiteaway-cf
-
+conda config --prepend channels conda-forge  # --prepend same as --add
+conda config --remove channels defaults      # only needed if you really want to exclude default channels.
 ```
 
 
+### Reproducible/locked environments:
 
+Options for creating reproducible/locked environments:
+
+* With `conda`: use `conda list --export > envs/conda-list-export.txt` 
+  to create exact package specification. 
+  You can re-create environment with `conda create --name <env> --file <this file>`.
+  (You should make a manual note of the conda channels used to install the packages.)
+
+* With `pipenv`, use `pipenv lock`. This will create `Pipenv.lock` file.
+  Recreate environment using `pipenv install`.
+
+
+
+Running tests
+--------------
+
+Tests are run using pytest (from the project root):
+
+    python -m pytest
 
 
 

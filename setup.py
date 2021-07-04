@@ -1,3 +1,10 @@
+"""
+Install using `pip install -e .`
+
+This will make `src/` available as an importable package.
+
+"""
+
 from setuptools import find_packages, setup
 
 setup(

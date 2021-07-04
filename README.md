@@ -15,30 +15,17 @@ Conda environment:
 ```cmd
 conda create -n data-whiteaway python numpy pandas notebook seaborn networkx requests sphinx coverage flake8
 conda install -c conda-forge --no-deps python_abi python-dotenv
-conda activate data-whiteaway 
+conda activate data-whiteaway
 ```
 
-Alternatively, from conda-forge 
+Alternatively, from conda-forge
 
 ```cmd
-conda create -n data-whiteaway-cf -c conda-forge python numpy pandas notebook seaborn networkx requests sphinx coverage flake8 python-dotenv
-conda activate data-whiteaway-cf 
+conda create -n whiteaway-cf -c conda-forge python numpy pandas notebook seaborn holoviews bokeh hvplot panel param networkx requests sphinx coverage flake8 python-dotenv
+conda activate data-whiteaway-cf
 
 ```
 
-
-
-
-Visualization packages:
-
-* matplotlib
-* pandas
-* seaborn
-* Apache Superset
-* bokeh
-* redash
-* plotly
-* 
 
 
 
